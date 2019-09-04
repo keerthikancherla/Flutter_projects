@@ -16,9 +16,7 @@ class RegistrationPageController{
   void savePassword(String value){
     user.password = value;
   }
-  void saveAge(String value){
-    user.age = int.parse(value);
-  }
+  
 
   String validateEmail(String value){
     if(value.contains('@') && value.contains('.')){
