@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-
+import '../view/calpage.dart';
 import '../view/homepage.dart';
 import '../view/registrationpage.dart';
 
 const popupmenulist = [
   'Registration', 
-  'Profile',
+  'Calculator',
   'Search',
   'Quit'
 ];
@@ -47,6 +47,9 @@ class HomePageController {
     var destination;
     if(menu == popupmenulist[0]){
       destination = RegistrationPage();
+    }
+    if(menu == popupmenulist[1]){
+      destination = CalPage();
     }
     if(destination != null){
       Navigator.push(state.context, MaterialPageRoute(

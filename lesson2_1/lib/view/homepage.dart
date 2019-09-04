@@ -34,7 +34,6 @@ class HomePageState extends State<HomePage> {
           icon: Icon(Icons.search),
           onPressed: (){},
         ),
-       
         PopupMenuButton<String>(
           onSelected: controller.popupMenuSelected,
           itemBuilder: controller.showPopupMenu,
