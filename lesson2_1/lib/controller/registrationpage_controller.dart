@@ -91,25 +91,8 @@ class RegistrationPageController{
   void register(){
     if(state.formkey.currentState.validate()){
       state.formkey.currentState.save();
-      //print(user.email+''+user.password+''+user.age.toString()
-      //+''+user.classification);
-      showDialog(
-        context: RegistrationPageState().context,
-        builder: (context){
-          return AlertDialog(
-            title: Text('data'),
-            content: Text(user.email+''+user.password+''+user.age.toString()+''+user.classification),
-            actions: <Widget>[
-              RaisedButton(
-                child: Text('OK'),
-                onPressed: (){
-                  Navigator.pop(RegistrationPageState().context);
-                },
-              )
-            ],
-          );
-        }
-      );
+      print(user.email+'' +user.password+''+user.age.toString()
+      +''+user.classification);
       print('Dart' + user.languages['dart'].toString());
       print('Java' + user.languages['java'].toString());
 
